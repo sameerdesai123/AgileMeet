@@ -1,0 +1,30 @@
+body,
+html {
+  height: 100%;
+}
+
+.bg {
+  /* The image used */
+  /* background-image: url("/virtusa-agile-meet/views/assests/Custom/img/meeting-bg.jpg"); */
+  background-color: white;
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  position: fixed;
+  /* Sit on top of the page content */
+  display: flexbox;
+  /* Hidden by default */
+  width: 100%;
+  /* Full width (cover the whole page) */
+  height: 100%;
+  /* Full height (cover the whole page) */
+  z-index: 2;
+  /* Specify a stack order in case you're using a different order for other elements */
+}
