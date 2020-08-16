@@ -17,7 +17,7 @@ public class SendMail {
 		    Email to = new Email(emailId);
 		    Content content = new Content("text/plain", con);
 		    Mail mail = new Mail(from, subject, to, content);
-		    SendGrid sg = new SendGrid("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");
+		    SendGrid sg = new SendGrid("");
 		    Request request = new Request();
 		    try {
 		      request.setMethod(Method.POST);
