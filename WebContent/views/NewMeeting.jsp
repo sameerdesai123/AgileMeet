@@ -53,17 +53,20 @@
 		}
 	%>
 	
-	<!-- Add Navbar import -->
-	<jsp:include page="/views/partials/nav-logout.jsp"></jsp:include>
-	<div class="wave-container">
+	<div class="bg">
 		<svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet"> 
          	<path d="M0, 100 C150, 200 350, 0 500, 100 L500, 00 L0, 0 Z" 
             	style="stroke:none; fill:dodgerblue;"> 
         	 </path> 
     	</svg>
-	</div>
-  <div class="main">
-    <div class="form container">
+   	</div>
+   	
+	
+	<!-- Add Navbar import -->
+   	<jsp:include page="/views/partials/nav-logout.jsp"></jsp:include>
+	
+  <div class="m-5">
+    <div class="container">
       <form action="<%= request.getContextPath() %>/save-meeting" method="post">
         <div class="main-meeting-details" style="padding-top: 2em;">
           <div class="row">
@@ -72,16 +75,16 @@
           <input type="hidden" name="id" value="" />
           <div class="form-group">
             <label for="title">Title</label>
-            <input type="text" name="title" class="form-control" value="<%= meeting.getTitle()%>">
+            <input type="text" name="title" class="form-control input" value="<%= meeting.getTitle()%>">
           </div>
           <div class="form-group row">
             <div class="col-lg-6 col-md-6">
               <label for="dateStart">Date Start</label>
-              <input name="dateStart" value="<%= meeting.getDateStart() %>" class="form-control" disabled />
+              <input name="dateStart" value="<%= meeting.getDateStart().substring(0, 10) +  " " + meeting.getDateStart().substring(11, 16) %>" class="form-control" disabled />
             </div>
             <div class="col-lg-6 col-md-6">
               <label for="dateEnd">Date End</label>
-              <input name="dateEnd" value="<%= meeting.getDateEnd() %>" class="form-control" disabled />
+              <input name="dateEnd" value="<%= meeting.getDateEnd().substring(0, 10) +  " " + meeting.getDateEnd().substring(11, 16) %>" class="form-control" disabled />
             </div>
           </div>
           <div class="form-group">

@@ -12,7 +12,7 @@ public class MailThreadPoolExecutor {
 	public static void runPool(String title,String orgMail, List<String> emails, List<String> tasks) {
 		Logger logger = LoggerFactory.getLogger(MailThreadPoolExecutor.class);
 		try{
-			System.out.println(emails.toString());
+			System.out.println("Emails:" + emails.toString());
         	ExecutorService executor = Executors.newFixedThreadPool(emails.size());
             for (int i = 0; i < emails.size(); i++) {
                 Runnable worker = new MailThread(tasks.get(i), title, emails.get(i), orgMail);

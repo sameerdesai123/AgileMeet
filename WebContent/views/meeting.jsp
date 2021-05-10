@@ -75,7 +75,7 @@ svg {
 	%>
 	
 	<!-- Add Navbar import -->
-	<div class="wave-container">
+	<div class="bg">
 		<svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet"> 
          	<path d="M0, 100 C150, 200 350, 0 500, 100 L500, 00 L0, 0 Z" 
             	style="stroke:none; fill:dodgerblue;"> 
@@ -83,7 +83,7 @@ svg {
     	</svg>
 	</div> 
 	<jsp:include page="/views/partials/nav-logout.jsp"></jsp:include>
-  <div class="main">
+  <div class="main m-5">
     <div class="form container">
     	<div class="row" style="padding-top: 2em;">
             <h2 class="col col-lg-8">Meeting </h2>

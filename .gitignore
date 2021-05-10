@@ -1,0 +1,6 @@
+/WebContent/WEB-INF/lib
+WebContent/WEB-INF/lib
+pom.xml
+*.jar
+target
+src/.dev.properties
